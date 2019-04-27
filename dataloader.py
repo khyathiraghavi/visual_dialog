@@ -117,7 +117,7 @@ class VisDialDataset(Dataset):
                     with open(params['cocoInfo'], 'r') as f:
                         coco_info = json.load(f)
                     id_to_fname = {
-                        im['id']: im['file_path']
+                        im['id']: im['file_name']
                         for im in coco_info['images']
                     }
                     cocoids = getattr(self, 'unique_img_%s'%dtype)
